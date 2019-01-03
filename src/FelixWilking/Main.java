@@ -3,10 +3,12 @@ package FelixWilking;
 public class Main {
 
     public static void main(String[] args) {
+        long time = System.nanoTime();
         int[] arr = randIntArr(10000, 10000);
         for(int i : bubbleSort(arr)){
             System.out.print(i + " ");
         }
+        System.out.println("\n" + (System.nanoTime() - time));
     }
 
     public static void swap(int[] arr, int i, int j){
